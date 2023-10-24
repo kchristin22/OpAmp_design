@@ -1,0 +1,194 @@
+
+**** 08/20/23 17:12:47 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ACsweep"  [ C:\Users\chris\Documents\spice\miller_op_amp_9994-PSpiceFiles\SCHEMATIC1\ACsweep.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ACsweep.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../miller_op_amp_9994-pspicefiles/miller_op_amp_9994.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 40 1 1e+10
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MILLER_OP_AMP_9994
+M_M2         N00379 N01412 N00464 N00464 nfet  
++ L=1u  
++ W=3.935u         
+M_M1         N00375 0 N00464 N00464 nfet  
++ L=1u  
++ W=3.935u         
+M_M3         N00375 N00375 N00383 N00383 pfet  
++ L=1u  
++ W=1u         
+M_M4         N00379 N00375 N00383 N00383 pfet  
++ L=1u  
++ W=1u         
+M_M5         N00464 N00713 N01047 N01047 nfet  
++ L=1u  
++ W= 1.70u         
+M_M6         N00569 N00379 N00383 N00383 pfet  
++ L=1u  
++ W=52.80u         
+C_Cc         N00379 N00569  2.89p  TC=0,0 
+M_M7         N00569 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=1.046u         
+I_IREF         N00383 N00713 DC 54.67uAdc  
+M_M8         N00713 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=1u         
+C_CL         0 N00569  2.94p  TC=0,0 
+V_Vss         N01047 0 -2.082Vdc
+V_Vdd         N00383 0 2.082Vdc
+V_Vin         N01412 0 DC 0Vdc AC 0.1Vac 
+
+**** RESUMING ACsweep.cir ****
+.END
+
+WARNING(ORPSIM-15223): Library file C:\Users\chris\Documents\spice\miller_op_amp_9994-pspicefiles\miller_op_amp_9994.lib has changed since index file miller_op_amp_9994.ind was created.
+
+WARNING(ORPSIM-15227): The timestamp changed from Sun Aug 20 16:14:14 2023 to Sun Aug 20 17:12:17 2023.
+
+INFO(ORPSIM-15422): Making new index file miller_op_amp_9994.ind for library file miller_op_amp_9994.lib.
+
+Index has 2 entries from 1 file(s).
+
+**** 08/20/23 17:12:47 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ACsweep"  [ C:\Users\chris\Documents\spice\miller_op_amp_9994-PSpiceFiles\SCHEMATIC1\ACsweep.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               nfet            pfet            
+               NMOS            PMOS            
+       LEVEL    3               3            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD  164.700000E-09  220.000000E+06 
+         VTO     .786            .9056       
+          KP   96.379000E-06  293.520000E+03 
+       GAMMA     .5863           .4863       
+         PHI     .6              .6          
+      LAMBDA    0               0            
+         RSH   85.45          104.7          
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .85         
+        PBSW     .8              .85         
+          CJ  385.410000E-06   48.447000E+03 
+        CJSW  139.400000E-12   16.457000E+09 
+          MJ    1.1854           .5027       
+        MJSW     .125195         .217168     
+        CGSO  402.410000E-12  537.520000E+09 
+        CGDO  402.410000E-12  537.520000E+09 
+        CGBO  361.440000E-12   33.650000E+09 
+        NSUB   16.160000E+15   18.900000E+15 
+         NFS    5.000000E+12    3.460000E+12 
+         TOX   21.200000E-09  212.000000E+06 
+          XJ  200.000000E-09  200.000000E-09 
+          UO  591.7           180.2          
+       UCRIT   10.000000E+03   10.000000E+03 
+        VMAX  208.200000E+03  373.200000E+03 
+       DELTA     .6967          1.52         
+       THETA     .08122        12.48         
+         ETA     .07066        16.41         
+       KAPPA     .1396          9.694        
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+ERROR(ORPSIM-16551): Floating point computation failed during Device/Model Load. Possible solutions: 1)Ensure that all device parameters are in valid range. 2)Try using .options LIMIT
+
+INTERNAL ERROR -- Divide by Zero in device M_M3, Divide
+
+ABORTING SIMULATION
+**** 08/20/23 17:12:47 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ACsweep"  [ C:\Users\chris\Documents\spice\miller_op_amp_9994-PSpiceFiles\SCHEMATIC1\ACsweep.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+Node counts:
+  Top level (NUNODS)                =           9
+  External (NCNODS)                 =           9
+  Total (NUMNOD)                    =           9
+
+Total device count (NUMEL)          =          14
+  Capacitors (C)                    =           2
+  Current Sources (I)               =           1
+  MosFETs (M)                       =           8
+  Voltage Sources (V)               =           3
+
+Number of subcircuits (X)           =           0
+
+Matrix statistics:
+  Matrix size (NSTOP)               =          12
+  Initial no. elements (NTTAR)      =          44
+  No. elements w/ fillin (NTTBR)    =          44
+  No. fillins (IFILL)               =           0
+  No. overflows (NTTOV)             =           0
+  No. LU operations (IOPS)          =           0
+  Percent sparsity (PERSPA)         =      69.444
+
+Analysis statistics:
+  No. total time points (NUMTTP)    =           0
+  No. rejected time points (NUMRTP) =           0
+  No. iterations (NUMNIT)           =           0
+
+Load Threads                        =           1
+
+Runtime statistics:                       Seconds      Iterations
+  Matrix load                       =        0.00
+  Matrix solution                   =        0.00               1
+  Readin                            =        0.00
+  General setup                     =         .03
+  CMI setup                     =        0.00
+  Setup                             =        0.00
+  DC sweep                          =        0.00               0
+  Bias point                        =        0.00               0
+  AC and noise                      =        0.00               0
+  Total transient analysis          =        0.00
+  Output                            =        0.00
+  Overhead                          =         .06
+  Total job time (using Solver 1)   =         .03
+

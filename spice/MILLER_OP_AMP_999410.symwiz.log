@@ -1,0 +1,7 @@
+STATUS: PSpice Model Import Wizard for "Capture" (22.1.0.d001)
+STATUS:  
+   INFO: OLB driven flow
+   INFO: Input File: C:\USERS\CHRIS\DOCUMENTS\SPICE\MILLER_OP_AMP_999410.olb
+   INFO: Symbol Name: MbreakN3_1
+  ERROR: Symbol "MbreakN3_1" not found in symbol library "C:\USERS\CHRIS\DOCUMENTS\SPICE\MILLER_OP_AMP_999410.olb".
+STATUS: 1 Error messages, 0 Warning messages

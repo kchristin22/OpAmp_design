@@ -1,0 +1,337 @@
+
+**** 08/24/23 16:11:41 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-temp"  [ c:\users\chris\documents\spice\miller_op_amp_9994-pspicefiles\schematic1\temp.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "temp.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../miller_op_amp_9994-pspicefiles/miller_op_amp_9994.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 40 1 1e+10
+.TEMP -40 20 85
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MILLER_OP_AMP_9994
+M_M2         N00379 N01412 N00464 N00464 nfet  
++ L=1u  
++ W=7u         
+M_M1         N00375 0 N00464 N00464 nfet  
++ L=1u  
++ W=7u         
+M_M3         N00375 N00375 N00383 N00383 pfet  
++ L=1u  
++ W=1u         
+M_M4         N00379 N00375 N00383 N00383 pfet  
++ L=1u  
++ W=1u         
+M_M5         N00464 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=3u         
+M_M6         N00569 N00379 N00383 N00383 pfet  
++ L=1u  
++ W=8u         
+C_Cc         N00379 N00569  1.4p  TC=0,0 
+M_M7         N00569 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=7u         
+M_M8         N00713 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=5u         
+C_CL         0 N00569  2.94p  TC=0,0 
+V_Vss         N01047 0 -2.082Vdc
+V_Vdd         N00383 0 2.082Vdc
+M_M9         N13700 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=5u         
+M_M10         N00713 N13700 N13521 N13521 pfet  
++ L=1u  
++ W=15u         
+M_M11         N13700 N13700 N13696 N13696 pfet  
++ L=1u  
++ W=15u         
+M_M12         N13521 N13696 N135011 N135011 pfet  
++ L=1u  
++ W=18u         
+M_M13         N13696 N13696 N00383 N00383 pfet  
++ L=1u  
++ W=18u         
+R_R1         N135011 N00383  103 TC=0,0 
+V_V1         N01412 0 DC 0Vdc AC 0.1Vac 
+.PARAM  rval=1k
+
+**** RESUMING temp.cir ****
+.END
+
+**** 08/24/23 16:11:41 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-temp"  [ c:\users\chris\documents\spice\miller_op_amp_9994-pspicefiles\schematic1\temp.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               nfet            pfet            
+               NMOS            PMOS            
+       LEVEL    3               3            
+         TPG                   -1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD  164.700000E-09   22.000000E-09 
+         VTO     .786           -.9056       
+          KP   96.379000E-06   29.352000E-06 
+       GAMMA     .5863           .4863       
+         PHI     .6              .6          
+      LAMBDA    0               0            
+         RSH   85.45          104.7          
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .85         
+        PBSW     .8              .85         
+          CJ  385.410000E-06  484.470000E-06 
+        CJSW  139.400000E-12  164.570000E-12 
+          MJ    1.1854           .5027       
+        MJSW     .125195         .217168     
+        CGSO  402.410000E-12   53.752000E-12 
+        CGDO  402.410000E-12   53.752000E-12 
+        CGBO  361.440000E-12  336.500000E-12 
+        NSUB   16.160000E+15   18.900000E+15 
+         NFS    5.000000E+12    3.460000E+12 
+         TOX   21.200000E-09   21.200000E-09 
+          XJ  200.000000E-09  200.000000E-09 
+          UO  591.7           180.2          
+       UCRIT   10.000000E+03   10.000000E+03 
+        VMAX  208.200000E+03  373.200000E+03 
+       DELTA     .6967          1.52         
+       THETA     .08122          .1248       
+         ETA     .07066          .1641       
+       KAPPA     .1396          9.694        
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 08/24/23 16:11:41 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-temp"  [ c:\users\chris\documents\spice\miller_op_amp_9994-pspicefiles\schematic1\temp.sim ] 
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =  -40.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    nfet           pfet      
+
+        VTO        9.036E-01     -1.031E+00  
+        PHI        7.467E-01      7.467E-01  
+         PB        9.020E-01      9.409E-01  
+     IS(JS)        1.835E-20      1.835E-20  
+         KP        1.408E-04      4.287E-05  
+         UO        8.643E+02      2.632E+02  
+
+
+**** 08/24/23 16:11:41 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-temp"  [ c:\users\chris\documents\spice\miller_op_amp_9994-pspicefiles\schematic1\temp.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =  -40.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00375)    -.2397 (N00379)    -.2397 (N00383)    2.0820 (N00464)    -.9466     
+
+(N00569)     .6051 (N00713)    -.8834 (N01047)   -2.0820 (N01412)    0.0000     
+
+(N13521)     .6473 (N13696)     .6642 (N13700)    -.8089 (N135011)    2.0710    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vss        5.492E-04
+    V_Vdd       -5.492E-04
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   2.29E-03  WATTS
+
+
+**** 08/24/23 16:11:41 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-temp"  [ c:\users\chris\documents\spice\miller_op_amp_9994-pspicefiles\schematic1\temp.sim ] 
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   20.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    nfet           pfet      
+
+        VTO        7.988E-01     -9.192E-01  
+        PHI        6.157E-01      6.157E-01  
+         PB        8.110E-01      8.598E-01  
+     IS(JS)        3.319E-15      3.319E-15  
+         KP        9.985E-05      3.041E-05  
+         UO        6.130E+02      1.867E+02  
+
+
+**** 08/24/23 16:11:41 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-temp"  [ c:\users\chris\documents\spice\miller_op_amp_9994-pspicefiles\schematic1\temp.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   20.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00375)    -.3887 (N00379)    -.3887 (N00383)    2.0820 (N00464)    -.9198     
+
+(N00569)     .7428 (N00713)    -.8841 (N01047)   -2.0820 (N01412)    0.0000     
+
+(N13521)     .6506 (N13696)     .6668 (N13700)    -.8129 (N135011)    2.0715    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vss        5.192E-04
+    V_Vdd       -5.192E-04
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   2.16E-03  WATTS
+
+
+**** 08/24/23 16:11:41 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-temp"  [ c:\users\chris\documents\spice\miller_op_amp_9994-pspicefiles\schematic1\temp.sim ] 
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   85.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    nfet           pfet      
+
+        VTO        6.748E-01     -7.870E-01  
+        PHI        4.676E-01      4.676E-01  
+         PB        7.063E-01      7.659E-01  
+     IS(JS)        1.838E-11      1.838E-11  
+         KP        7.394E-05      2.252E-05  
+         UO        4.540E+02      1.383E+02  
+
+
+**** 08/24/23 16:11:41 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-temp"  [ c:\users\chris\documents\spice\miller_op_amp_9994-pspicefiles\schematic1\temp.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   85.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00375)    -.5675 (N00379)    -.5675 (N00383)    2.0820 (N00464)    -.8872     
+
+(N00569)     .8032 (N00713)    -.8861 (N01047)   -2.0820 (N01412)    0.0000     
+
+(N13521)     .6551 (N13696)     .6713 (N13700)    -.8150 (N135011)    2.0716    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vss        4.994E-04
+    V_Vdd       -4.994E-04
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   2.08E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 08/24/23 16:11:41 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-temp"  [ c:\users\chris\documents\spice\miller_op_amp_9994-pspicefiles\schematic1\temp.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .09
+

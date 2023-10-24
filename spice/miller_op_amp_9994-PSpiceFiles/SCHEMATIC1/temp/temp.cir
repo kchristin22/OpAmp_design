@@ -1,0 +1,21 @@
+** Profile: "SCHEMATIC1-temp"  [ c:\users\chris\documents\spice\miller_op_amp_9994-pspicefiles\schematic1\temp.sim ] 
+
+** Creating circuit file "temp.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../miller_op_amp_9994-pspicefiles/miller_op_amp_9994.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 40 1 1e+10
+.TEMP -40 20 85
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

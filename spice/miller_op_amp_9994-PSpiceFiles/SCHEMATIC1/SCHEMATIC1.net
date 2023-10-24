@@ -1,0 +1,47 @@
+* source MILLER_OP_AMP_9994
+M_M2         N00379 N01412 N00464 N00464 nfet  
++ L=1u  
++ W=7u         
+M_M1         N00375 0 N00464 N00464 nfet  
++ L=1u  
++ W=7u         
+M_M3         N00375 N00375 N00383 N00383 pfet  
++ L=1u  
++ W=1u         
+M_M4         N00379 N00375 N00383 N00383 pfet  
++ L=1u  
++ W=1u         
+M_M5         N00464 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=3u         
+M_M6         N00569 N00379 N00383 N00383 pfet  
++ L=1u  
++ W=8u         
+C_Cc         N00379 N00569  1.4p  TC=0,0 
+M_M7         N00569 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=7u         
+M_M8         N00713 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=5u         
+C_CL         0 N00569  2.94p  TC=0,0 
+V_Vss         N01047 0 -2.082Vdc
+V_Vdd         N00383 0 2.082Vdc
+M_M9         N13700 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=5u         
+M_M10         N00713 N13700 N13521 N13521 pfet  
++ L=1u  
++ W=15u         
+M_M11         N13700 N13700 N13696 N13696 pfet  
++ L=1u  
++ W=15u         
+M_M12         N13521 N13696 N135011 N135011 pfet  
++ L=1u  
++ W=18u         
+M_M13         N13696 N13696 N00383 N00383 pfet  
++ L=1u  
++ W=18u         
+R_R1         N135011 N00383  103 TC=0,0 
+V_V1         N01412 0 DC 0Vdc AC 0.1Vac 
+.PARAM  rval=1k

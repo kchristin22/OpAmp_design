@@ -1,0 +1,175 @@
+
+**** 08/20/23 20:41:44 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time1"  [ C:\Users\chris\Documents\spice\miller_op_amp_9994-PSpiceFiles\SCHEMATIC1\time1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "time1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../miller_op_amp_9994-pspicefiles/miller_op_amp_9994.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 40 1 1e+10
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MILLER_OP_AMP_9994
+M_M2         N00379 N01412 N00464 N00464 nfet  
++ L=1u  
++ W=7.329u         
+M_M1         N00375 0 N00464 N00464 nfet  
++ L=1u  
++ W=7.329u         
+M_M3         N00375 N00375 N00383 N00383 pfet  
++ L=1u  
++ W=1u         
+M_M4         N00379 N00375 N00383 N00383 pfet  
++ L=1u  
++ W=1u         
+M_M5         N00464 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=3.17u         
+M_M6         N00569 N00379 N00383 N00383 pfet  
++ L=1u  
++ W=8.3479u         
+C_Cc         N00379 N00569  2.89p  TC=0,0 
+M_M7         N00569 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=6.6159u         
+I_IREF         N00383 N00713 DC 54.67uAdc  
+M_M8         N00713 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=5u         
+C_CL         0 N00569  2.94p  TC=0,0 
+V_Vss         N01047 0 -2.082Vdc
+V_Vdd         N00383 0 2.082Vdc
+V_V1         N01412 0 DC 0Vdc AC 0.1Vac 
+
+**** RESUMING time1.cir ****
+.END
+
+**** 08/20/23 20:41:44 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time1"  [ C:\Users\chris\Documents\spice\miller_op_amp_9994-PSpiceFiles\SCHEMATIC1\time1.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               nfet            pfet            
+               NMOS            PMOS            
+       LEVEL    3               3            
+         TPG                   -1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD  164.700000E-09   22.000000E-09 
+         VTO     .786           -.9056       
+          KP   96.379000E-06   29.352000E-06 
+       GAMMA     .5863           .4863       
+         PHI     .6              .6          
+      LAMBDA    0               0            
+         RSH   85.45          104.7          
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .85         
+        PBSW     .8              .85         
+          CJ  385.410000E-06  484.470000E-06 
+        CJSW  139.400000E-12  164.570000E-12 
+          MJ    1.1854           .5027       
+        MJSW     .125195         .217168     
+        CGSO  402.410000E-12   53.752000E-12 
+        CGDO  402.410000E-12   53.752000E-12 
+        CGBO  361.440000E-12  336.500000E-12 
+        NSUB   16.160000E+15   18.900000E+15 
+         NFS    5.000000E+12    3.460000E+12 
+         TOX   21.200000E-09   21.200000E-09 
+          XJ  200.000000E-09  200.000000E-09 
+          UO  591.7           180.2          
+       UCRIT   10.000000E+03   10.000000E+03 
+        VMAX  208.200000E+03  373.200000E+03 
+       DELTA     .6967          1.52         
+       THETA     .08122          .1248       
+         ETA     .07066          .1641       
+       KAPPA     .1396          9.694        
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 08/20/23 20:41:44 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time1"  [ C:\Users\chris\Documents\spice\miller_op_amp_9994-PSpiceFiles\SCHEMATIC1\time1.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00375)    -.0514 (N00379)    -.0514 (N00383)    2.0820 (N00464)    -.8226     
+
+(N00569)     .9513 (N00713)   -1.0468 (N01047)   -2.0820 (N01412)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vss        2.647E-04
+    V_Vdd       -2.647E-04
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.10E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 08/20/23 20:41:44 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time1"  [ C:\Users\chris\Documents\spice\miller_op_amp_9994-PSpiceFiles\SCHEMATIC1\time1.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

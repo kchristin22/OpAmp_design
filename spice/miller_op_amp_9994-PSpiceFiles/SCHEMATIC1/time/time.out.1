@@ -1,0 +1,188 @@
+
+**** 08/20/23 16:08:38 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time"  [ C:\Users\chris\Documents\spice\miller_op_amp_9994-PSpiceFiles\SCHEMATIC1\time.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "time.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../miller_op_amp_9994-pspicefiles/miller_op_amp_9994.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MILLER_OP_AMP_9994
+M_M2         N00379 N01412 N00464 N00464 nfet  
++ L=1u  
++ W=3.935u         
+M_M1         N00375 0 N00464 N00464 nfet  
++ L=1u  
++ W=3.935u         
+M_M3         N00375 N00375 N00383 N00383 pfet  
++ L=1u  
++ W=1u         
+M_M4         N00379 N00375 N00383 N00383 pfet  
++ L=1u  
++ W=1u         
+M_M5         N00464 N00713 N01047 N01047 nfet  
++ L=1u  
++ W= 1.70u         
+M_M6         N00569 N00379 N00383 N00383 pfet  
++ L=1u  
++ W=52.80u         
+C_Cc         N00379 N00569  2.89p  TC=0,0 
+M_M7         N00569 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=1.046u         
+I_IREF         N00383 N00713 DC 54.67uAdc  
+M_M8         N00713 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=1u         
+C_CL         0 N00569  2.94p  TC=0,0 
+V_Vss         N01047 0 -2.082Vdc
+V_Vdd         N00383 0 2.082Vdc
+V_Vin         N01412 0 DC 0Vdc AC 0.1Vac 
+R_R1         N00379 0  1k TC=0,0 
+
+**** RESUMING time.cir ****
+.END
+
+**** 08/20/23 16:08:38 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time"  [ C:\Users\chris\Documents\spice\miller_op_amp_9994-PSpiceFiles\SCHEMATIC1\time.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               nfet            pfet            
+               NMOS            PMOS            
+       LEVEL    3               3            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD   16.470000E+06  220.000000E+06 
+         VTO     .786            .9056       
+          KP  963.790000E+03  293.520000E+03 
+       GAMMA     .5863           .4863       
+         PHI     .6              .6          
+      LAMBDA    0               0            
+         RSH   85.45          104.7          
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .85         
+        PBSW     .8              .85         
+          CJ   38.541000E+03   48.447000E+03 
+        CJSW   13.940000E+09   16.457000E+09 
+          MJ    1.1854           .5027       
+        MJSW     .125195         .217168     
+        CGSO   40.241000E+09  537.520000E+09 
+        CGDO   40.241000E+09  537.520000E+09 
+        CGBO   36.144000E+09   33.650000E+09 
+        NSUB   16.160000E+15   18.900000E+15 
+         NFS    5.000000E+12    3.460000E+12 
+         TOX  212.000000E+06  212.000000E+06 
+          XJ  200.000000E-09  200.000000E-09 
+          UO  591.7           180.2          
+       UCRIT   10.000000E+03   10.000000E+03 
+        VMAX  208.200000E+03  373.200000E+03 
+       DELTA   69.67            1.52         
+       THETA  812.2            12.48         
+         ETA  706.6            16.41         
+       KAPPA   13.96            9.694        
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+ERROR(ORPSIM-16551): Floating point computation failed during Device/Model Load. Possible solutions: 1)Ensure that all device parameters are in valid range. 2)Try using .options LIMIT
+
+INTERNAL ERROR -- Divide by Zero in device M_M2, Divide
+
+ABORTING SIMULATION
+**** 08/20/23 16:08:38 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time"  [ C:\Users\chris\Documents\spice\miller_op_amp_9994-PSpiceFiles\SCHEMATIC1\time.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+Node counts:
+  Top level (NUNODS)                =           9
+  External (NCNODS)                 =           9
+  Total (NUMNOD)                    =           9
+
+Total device count (NUMEL)          =          15
+  Capacitors (C)                    =           2
+  Current Sources (I)               =           1
+  MosFETs (M)                       =           8
+  Resistors (R)                     =           1
+  Voltage Sources (V)               =           3
+
+Number of subcircuits (X)           =           0
+
+Matrix statistics:
+  Matrix size (NSTOP)               =          12
+  Initial no. elements (NTTAR)      =          44
+  No. elements w/ fillin (NTTBR)    =          44
+  No. fillins (IFILL)               =           0
+  No. overflows (NTTOV)             =           0
+  No. LU operations (IOPS)          =           0
+  Percent sparsity (PERSPA)         =      69.444
+
+Analysis statistics:
+  No. total time points (NUMTTP)    =           0
+  No. rejected time points (NUMRTP) =           0
+  No. iterations (NUMNIT)           =           0
+
+Load Threads                        =           1
+
+Runtime statistics:                       Seconds      Iterations
+  Matrix load                       =        0.00
+  Matrix solution                   =        0.00               1
+  Readin                            =         .02
+  General setup                     =        0.00
+  CMI setup                     =        0.00
+  Setup                             =        0.00
+  DC sweep                          =        0.00               0
+  Bias point                        =        0.00               0
+  AC and noise                      =        0.00               0
+  Total transient analysis          =        0.00
+  Output                            =        0.00
+  Overhead                          =         .08
+  Total job time (using Solver 1)   =         .02
+

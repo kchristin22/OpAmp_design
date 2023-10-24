@@ -1,0 +1,70 @@
+
+**** 08/22/23 10:38:43 ***** PSpice 22.1.0 (19 March 2023) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ac"  [ c:\users\chris\documents\spice\miller_op_amp_9994-pspicefiles\schematic1\ac.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ac.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../miller_op_amp_9994-pspicefiles/miller_op_amp_9994.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 40 1 1e+10
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MILLER_OP_AMP_9994
+M_M2         N00379 N01412 N00464 N00464 nfet  
++ L=1u  
++ W=1u         
+M_M1         N00375 0 N00464 N00464 nfet  
++ L=1u  
++ W=1u         
+M_M3         N00375 N00375 N00383 N00383 pfet  
++ L=1u  
++ W=1u         
+M_M4         N00379 N00375 N00383 N00383 pfet  
++ L=1u  
++ W=1u         
+M_M5         N00464 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=1u         
+M_M6         N00569 N00379 N00383 N00383 pfet  
++ L=1u  
++ W=22u         
+C_Cc         N00379 N00569  0.75p  TC=0,0 
+M_M7         N00569 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=3u         
+I_IREF         N00383 N00713 DC 54.67uAdc  
+M_M8         N00713 N00713 N01047 N01047 nfet  
++ L=1u  
++ W=u         
+----$
+ERROR(ORPSIM-16152): Invalid number: Error while converting token 'u' to double value. Token can be a constant or expression
+C_CL         0 N00569  2.94p  TC=0,0 
+V_Vss         N01047 0 -2.082Vdc
+V_Vdd         N00383 0 2.082Vdc
+V_V1         N01412 0 DC 0Vdc AC 0.1Vac 
+
+**** RESUMING ac.cir ****
+.END
+
